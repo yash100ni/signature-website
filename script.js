@@ -43,11 +43,13 @@ document.querySelectorAll('.select-day').forEach(btn => {
 
 // ❌ REMOVED preventDefault so FormSubmit works
 // ❌ REMOVED fake confirmation logic
+
 // Form submission
 document.getElementById('checkout-form').addEventListener('submit', function(e){
   e.preventDefault();
   this.style.display = 'none';
-  document.querySelector('.confirmation').style.display = 'block';});
+  document.querySelector('.confirmation').style.display = 'block';
+});
 // Hearts animation
 function spawnHearts() {
   setInterval(() => {
