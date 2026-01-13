@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background: #fff0f5;
+  overflow-x: hidden;
+}
+
+h1, h2 {
+  color: #ff4d6d;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.price {
+  font-weight: bold;
+  color: #ff4d6d;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+button {
+  background: #ff6f91;
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ff3f72;
+}
+
+img {
+  width: 150px;
+  display: block;
+  margin: 1rem auto;
+}
+
+#checkout input, #checkout textarea {
+  display: block;
+  width: 80%;
+  margin: 0.5rem auto;
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: 1px solid #ffb6c1;
+}
+
+.confirmation {
+  display: none;
+  color: green;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.screen {
+  display: none;
+  padding: 2rem;
+}
+
+.screen.active {
+  display: block;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.heart {
+  position: fixed;
+  font-size: 1.2rem;
+  color: #ff4d6d;
+  pointer-events: none;
+  animation: float 6s linear infinite;
+  opacity: 0.7;
+  z-index: 0;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) scale(0.8); opacity:1; }
+  50% { transform: translateY(-150px) scale(1); opacity:0.8; }
+  100% { transform: translateY(-300px) scale(0.8); opacity:0; }
+}
+
+/* Landing Screen */
+#landing {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
