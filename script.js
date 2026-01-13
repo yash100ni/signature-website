@@ -41,12 +41,21 @@ document.querySelectorAll('.select-day').forEach(btn => {
   });
 });
 
-// Form submission
-document.getElementById('checkout-form').addEventListener('submit', function(e){
-  e.preventDefault();
-  this.style.display = 'none';
-  document.querySelector('.confirmation').style.display = 'block';
+// Form submission (safe version)
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("checkout-form");
+  const confirmation = document.querySelector(".confirmation");
+
+  if (!form) return; // prevents crash if screen not loaded yet
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // stop page reload
+
+    form.style.display = "none";
+    confirmation.style.display = "block";
+  });
 });
+
 
 // Hearts animation
 function spawnHearts() {
