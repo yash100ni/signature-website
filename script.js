@@ -41,12 +41,8 @@ document.querySelectorAll('.select-day').forEach(btn => {
   });
 });
 
-// Form submission
-document.getElementById('checkout-form').addEventListener('submit', function(e){
-  e.preventDefault();
-  this.style.display = 'none';
-  document.querySelector('.confirmation').style.display = 'block';
-});
+// ❌ REMOVED preventDefault so FormSubmit works
+// ❌ REMOVED fake confirmation logic
 
 // Hearts animation
 function spawnHearts() {
