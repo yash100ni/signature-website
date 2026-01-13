@@ -41,18 +41,19 @@ document.querySelectorAll('.select-day').forEach(btn => {
   });
 });
 
-// Form submission (safe version)
+// Form UX (NO blocking, NO preventDefault)
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("checkout-form");
   const confirmation = document.querySelector(".confirmation");
 
-  if (!form) return; // prevents crash if screen not loaded yet
+  if (!form || !confirmation) return;
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault(); // stop page reload
-
-    form.style.display = "none";
-    confirmation.style.display = "block";
+  form.addEventListener("submit", function () {
+    // show message AFTER submit is triggered
+    setTimeout(() => {
+      form.style.display = "none";
+      confirmation.style.display = "block";
+    }, 100);
   });
 });
 
