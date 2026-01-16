@@ -18,15 +18,21 @@
 </section>
 
 <!-- Valentine Screens -->
-<section id="valentine-screens" style="display:none;">
-  <!-- (ALL YOUR DAY SCREENS UNCHANGED) -->
+<section id="valentine-screens">
+  <!-- MAKE SURE YOUR .screen DIVS EXIST HERE -->
+  <!-- Example (keep yours as-is) -->
+  <!--
+  <div class="screen active">
+    <h2>Rose Day</h2>
+    <button class="select-day">Select This Day</button>
+  </div>
+  -->
 </section>
 
 <!-- Checkout -->
-<section id="checkout" style="display:none;">
+<section id="checkout">
   <h2>Send Your Valentine Gift 💌</h2>
 
-  <!-- FORM (NO SUBMIT BUTTON HERE) -->
   <form id="giftForm">
     <input type="text" id="boyfriend" placeholder="Your Name" required>
     <input type="text" id="girlfriend" placeholder="Her Name" required>
@@ -35,44 +41,34 @@
     <textarea id="message" placeholder="Message for her" required></textarea>
   </form>
 
-  <!-- PAYMENT BOX -->
   <div class="payment-box">
     <h3>💝 Complete Your Payment</h3>
 
     <p>
       After filling this form, please make the payment using the QR code below.
-      <br>
-      Send the payment screenshot on WhatsApp to confirm your order.
+      <br>Send the payment screenshot on WhatsApp.
     </p>
 
     <img src="assets/payment-qr.png" alt="Payment QR Code">
 
-    <!-- CHECKBOX -->
-    <label class="payment-check">
+    <label>
       <input type="checkbox" id="paymentCheck">
       I have completed the payment
     </label>
 
     <br><br>
 
-    <!-- SEND GIFT BUTTON (AFTER QR) -->
     <button id="sendGiftBtn" disabled>Send Gift</button>
 
     <p class="whatsapp">
       📲 WhatsApp:
-      <a href="https://wa.me/91XXXXXXXXXX" target="_blank">
-        +91 XXXXXXXXXX
+      <a href="https://wa.me/919079011278" target="_blank">
+        +91 9079011278
       </a>
     </p>
-
-    <small>
-      For any enquiry or customization, message us on WhatsApp.
-    </small>
   </div>
 
-  <p class="confirmation" style="display:none;">
-    Thank you! Signature will contact you soon 💖
-  </p>
+  <p class="confirmation">Thank you! Signature will contact you soon 💖</p>
 </section>
 
 <script src="script.js"></script>
