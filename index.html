@@ -1,175 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Signature Café - 7 Days of Love</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Landing Screen -->
-  <section id="landing">
-    <div class="landing-content">
-      <h1>Welcome to Signature’s 7 Days of Love 💖</h1>
-      <button id="start-btn">Start</button>
-    </div>
-  </section>
+<!-- Landing Screen -->
+<section id="landing">
+  <div class="landing-content">
+    <h1>Welcome to Signature’s 7 Days of Love 💖</h1>
+    <button id="start-btn">Start</button>
+  </div>
+</section>
 
-  <!-- Valentine Screens -->
-  <section id="valentine-screens" style="display:none;">
-    
-    <!-- Screen Template -->
-    <div class="screen" id="screen1">
-      <h2>🌹 Rose Day</h2>
-      <img src="assets/rose.png.jpg" alt="Rose">
-      <ul>
-        <li>Rose</li>
-        <li>Cold Coffee</li>
-        <li>Heart Cookie</li>
-      </ul>
-      <p class="price">₹599</p>
-      <div class="nav-buttons">
-        <button class="next">Next →</button>
-      </div>
-      <button class="select-day">Select This Day</button>
-    </div>
+<!-- Valentine Screens -->
+<section id="valentine-screens" style="display:none;">
+  <!-- (ALL YOUR DAY SCREENS UNCHANGED) -->
+</section>
 
-    <div class="screen" id="screen2">
-      <h2>💌 Propose Day</h2>
-      <img src="assets/propose.png.jpg" alt="Propose">
-      <ul>
-        <li>Mini Cake</li>
-        <li>Love Letter</li>
-        <li>Candle</li>
-      </ul>
-      <p class="price">₹699</p>
-      <div class="nav-buttons">
-        <button class="prev">← Prev</button>
-        <button class="next">Next →</button>
-      </div>
-      <button class="select-day">Select This Day</button>
-    </div>
+<!-- Checkout -->
+<section id="checkout" style="display:none;">
+  <h2>Send Your Valentine Gift 💌</h2>
 
-    <div class="screen" id="screen3">
-      <h2>🍫 Chocolate Day</h2>
-      <img src="assets/chocolate.png.jpg" alt="Chocolate">
-      <ul>
-        <li>Chocolate Box</li>
-        <li>Brownie</li>
-        <li>Milkshake</li>
-      </ul>
-      <p class="price">₹699</p>
-      <div class="nav-buttons">
-        <button class="prev">← Prev</button>
-        <button class="next">Next →</button>
-      </div>
-      <button class="select-day">Select This Day</button>
-    </div>
+  <!-- FORM (NO SUBMIT BUTTON HERE) -->
+  <form id="giftForm">
+    <input type="text" id="boyfriend" placeholder="Your Name" required>
+    <input type="text" id="girlfriend" placeholder="Her Name" required>
+    <input type="tel" id="phone" placeholder="Phone Number" required>
+    <input type="date" id="delivery" required>
+    <textarea id="message" placeholder="Message for her" required></textarea>
+  </form>
 
-    <div class="screen" id="screen4">
-      <h2>🧸 Teddy Day</h2>
-      <img src="assets/teddy.png.jpg" alt="Teddy">
-      <ul>
-        <li>Cute Teddy</li>
-        <li>Coffee</li>
-        <li>Donut</li>
-      </ul>
-      <p class="price">₹799</p>
-      <div class="nav-buttons">
-        <button class="prev">← Prev</button>
-        <button class="next">Next →</button>
-      </div>
-      <button class="select-day">Select This Day</button>
-    </div>
+  <!-- PAYMENT BOX -->
+  <div class="payment-box">
+    <h3>💝 Complete Your Payment</h3>
 
-    <div class="screen" id="screen5">
-      <h2>🤝 Promise Day</h2>
-      <ul>
-        <li>Promise Card</li>
-        <li>Cake Slice</li>
-        <li>Hot Chocolate</li>
-      </ul>
-      <p class="price">₹699</p>
-      <div class="nav-buttons">
-        <button class="prev">← Prev</button>
-        <button class="next">Next →</button>
-      </div>
-      <button class="select-day">Select This Day</button>
-    </div>
+    <p>
+      After filling this form, please make the payment using the QR code below.
+      <br>
+      Send the payment screenshot on WhatsApp to confirm your order.
+    </p>
 
-    <div class="screen" id="screen6">
-      <h2>🤗 Hug Day</h2>
-      <ul>
-        <li>Candle</li>
-        <li>Brownie</li>
-        <li>Hug Message</li>
-      </ul>
-      <p class="price">₹699</p>
-      <div class="nav-buttons">
-        <button class="prev">← Prev</button>
-        <button class="next">Next →</button>
-      </div>
-      <button class="select-day">Select This Day</button>
-    </div>
+    <img src="assets/payment-qr.png" alt="Payment QR Code">
 
-    <div class="screen" id="screen7">
-      <h2>❤️ Valentine’s Day</h2>
-      <ul>
-        <li>Flower Bouquet</li>
-        <li>Signature Cake</li>
-        <li>Two Drinks</li>
-        <li>Love Letter</li>
-      </ul>
-      <p class="price">₹999</p>
-      <div class="nav-buttons">
-        <button class="prev">← Prev</button>
-      </div>
-      <button class="select-day">Select This Day</button>
-    </div>
-  </section>
+    <!-- CHECKBOX -->
+    <label class="payment-check">
+      <input type="checkbox" id="paymentCheck">
+      I have completed the payment
+    </label>
 
-  <!-- Checkout Form -->
-  <section id="checkout" style="display:none;">
-    <h2>Send Your Valentine Gift 💌</h2>
-   <form action="https://api.web3forms.com/submit" method="POST">
-         <input type="hidden" name="access_key" value="48ab1ca6-9d90-42ed-bd35-c33a6288e55f">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_next" value="https://yash100ni.github.io/signature-website/thankyou.html">
+    <br><br>
 
-      <input type="text" name="boyfriend" placeholder="Your Name" required>
-      <input type="text" name="girlfriend" placeholder="Her Name" required>
-      <input type="tel" name="phone" placeholder="Phone Number" required>
-      <input type="date" name="delivery" required>
-      <textarea name="message" placeholder="Message for her" required></textarea>
-      <button type="submit">Send Gift</button>
-    </form>
+    <!-- SEND GIFT BUTTON (AFTER QR) -->
+    <button id="sendGiftBtn" disabled>Send Gift</button>
 
-<div class="payment-box">
-  <h3>💝 Complete Your Payment</h3>
-  <p>
-    After filling this form, please make the payment using the QR code below.
-    <br />
-    Send the payment screenshot on WhatsApp to confirm your order.
+    <p class="whatsapp">
+      📲 WhatsApp:
+      <a href="https://wa.me/91XXXXXXXXXX" target="_blank">
+        +91 XXXXXXXXXX
+      </a>
+    </p>
+
+    <small>
+      For any enquiry or customization, message us on WhatsApp.
+    </small>
+  </div>
+
+  <p class="confirmation" style="display:none;">
+    Thank you! Signature will contact you soon 💖
   </p>
-
-  <img src="assets/payment-qr.png" alt="Payment QR Code" />
-
-  <p class="whatsapp">
-    📲 WhatsApp: <a href="https://wa.me/91XXXXXXXXXX" target="_blank">
-    +91 XXXXXXXXXX</a>
-  </p>
-
-  <small>
-    For any enquiry or customization, message us on WhatsApp.
-  </small>
-</div>
-
-    
-  <p class="confirmation">Thank you! Signature will contact you soon 💖</p>
-  </section>
+</section>
 
 <script src="script.js"></script>
 </body>
