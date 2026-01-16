@@ -9,9 +9,13 @@ const checkout = document.getElementById('checkout');
 startBtn.addEventListener('click', () => {
   landing.style.display = 'none';
   valentineScreens.style.display = 'block';
+
+  screens.forEach(s => s.classList.remove('active'));
   screens[0].classList.add('active');
+
   spawnHearts();
 });
+
 
 // Navigation
 screens.forEach((screen, index) => {
