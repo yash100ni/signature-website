@@ -101,3 +101,42 @@ img {
   align-items: center;
   text-align: center;
 }
+
+.payment-box {
+  margin-top: 30px;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #ffd1dc;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.payment-box h3 {
+  color: #ff5a7a;
+  margin-bottom: 10px;
+}
+
+.payment-box p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.payment-box img {
+  width: 220px;
+  margin: 10px 0;
+  border-radius: 12px;
+}
+
+.payment-box .whatsapp a {
+  color: #25d366;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.payment-box small {
+  display: block;
+  margin-top: 10px;
+  color: #888;
+}
+
