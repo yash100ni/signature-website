@@ -80,7 +80,7 @@ ${message}
 ✅ Payment Completed`
   );
 
-  window.open(`https://wa.me/91XXXXXXXXXX?text=${text}`, "_blank");
+  window.open(`https://wa.me/919079011278?text=${text}`, "_blank");
   document.querySelector(".confirmation").style.display = "block";
 });
 
