@@ -17,6 +17,27 @@ startBtn.addEventListener('click', () => {
   spawnHearts();
 });
 
+// Navigation
+screens.forEach((screen, index) => {
+  const next = screen.querySelector('.next');
+  const prev = screen.querySelector('.prev');
+
+  if (next) {
+    next.addEventListener('click', () => {
+      screen.classList.remove('active');
+      screens[index + 1].classList.add('active');
+    });
+  }
+
+  if (prev) {
+    prev.addEventListener('click', () => {
+      screen.classList.remove('active');
+      screens[index - 1].classList.add('active');
+    });
+  }
+});
+
+
 // DAY SELECT
 document.querySelectorAll('.select-day').forEach(btn => {
   btn.addEventListener('click', () => {
